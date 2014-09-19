@@ -29,7 +29,8 @@ RUN apt-get -qq update && \
       libyaml-dev \
       libssl-dev \
       libxslt-dev \
-      libxml2-dev; \
+      libxml2-dev \
+      openjdk-7-jre-headless; \
     apt-get clean -y; \
     apt-get autoremove -y
 
