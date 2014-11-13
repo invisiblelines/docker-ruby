@@ -1,7 +1,7 @@
 FROM ubuntu:14.04.1
 MAINTAINER Kieran Johnson <kieran@invisiblelines.com>
 
-ENV RUBY_VERSION 2.1.4
+ENV RUBY_VERSION 2.1.5
 ENV DEBIAN_FRONTEND noninteractive
 RUN locale-gen en_GB.UTF-8
 ENV LANG en_GB.UTF-8
