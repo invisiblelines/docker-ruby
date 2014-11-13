@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:14.04.1
 MAINTAINER Kieran Johnson <kieran@invisiblelines.com>
 
 ENV RUBY_VERSION 2.1.3
