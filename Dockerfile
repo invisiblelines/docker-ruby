@@ -38,12 +38,12 @@ RUN locale-gen en_GB.UTF-8 && dpkg-reconfigure locales
 
 RUN echo "Europe/London" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
 
-RUN git clone https://github.com/sstephenson/ruby-build.git
-RUN cd ruby-build && ./install.sh
-RUN ruby-build $RUBY_VERSION /usr/local
+ONBUILD RUN git clone https://github.com/sstephenson/ruby-build.git
+ONBUILD RUN cd ruby-build && ./install.sh
+ONBUILD RUN ruby-build $RUBY_VERSION /usr/local
 
-RUN echo "gem: --no-document" > ~/.gemrc
+ONBUILD RUN echo "gem: --no-document" > ~/.gemrc
 
-RUN gem install bundler
+ONBUILD RUN gem install bundler
 
-CMD /bin/bash
+ONBUILD CMD /bin/bash
