@@ -1,7 +1,7 @@
-FROM ubuntu:14.04.1
+FROM ubuntu:14.10
 MAINTAINER Kieran Johnson <kieran@invisiblelines.com>
 
-ENV RUBY_VERSION 2.1.5
+ENV RUBY_VERSION 2.2.0
 ENV DEBIAN_FRONTEND noninteractive
 RUN locale-gen en_GB.UTF-8
 ENV LANG en_GB.UTF-8
@@ -30,6 +30,7 @@ RUN apt-get -qq update && \
       libssl-dev \
       libxslt-dev \
       libxml2-dev \
+      libffi-dev \
       openjdk-7-jre-headless; \
     apt-get clean -y; \
     apt-get autoremove -y
